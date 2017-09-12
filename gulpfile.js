@@ -26,7 +26,8 @@ gulp.task('scripts', () => {
       suffix: '.min'
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('styles', () => {
