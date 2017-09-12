@@ -40,7 +40,7 @@ function addToDOM(results) {
     return a + `
       <a href="${url + b.pageid}" target="_blank">
         <div class="result">
-          <h2>${b.title}</h2>
+          <h3>${b.title}</h3>
           <p>${b.extract}</p>
         </div>
       </a>
