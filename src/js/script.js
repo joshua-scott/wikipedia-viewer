@@ -3,6 +3,7 @@ const output = document.querySelector('.output');
 
 async function executeQuery(e) {
   e.preventDefault();
+  $(output).fadeOut();
 
   const queryText = form.search.value;
   const queryOptions = {
@@ -38,7 +39,7 @@ function addToDOM(results) {
 
   const toAppend = results.reduce((a, b) => {
     return a + `
-      <a href="${url + b.pageid}" target="_blank">
+      <a href="${url + b.pageid}" target="_blank" class="hidden">
         <div class="result">
           <h3>${b.title}</h3>
           <p>${b.extract}</p>
@@ -48,6 +49,8 @@ function addToDOM(results) {
   }, '');
 
   output.innerHTML = toAppend;
+
+  $(output).fadeIn(1000);
 }
 
 form.addEventListener('submit', executeQuery);
