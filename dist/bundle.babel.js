@@ -56,4 +56,4 @@ function addToDOM(results) {
 }
 
 form.addEventListener('submit', executeQuery);
-//# sourceMappingURL=bundle.min.js.map
+//# sourceMappingURL=bundle.babel.js.map
