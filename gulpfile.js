@@ -23,7 +23,7 @@ gulp.task('scripts', () => {
     .pipe(babel())
     .pipe(concat('bundle.js'))
     .pipe(rename({
-      suffix: '.min'
+      suffix: '.babel'
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dist'))
