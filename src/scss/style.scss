@@ -38,7 +38,7 @@ form {
     &:focus {
       transform: scale(1.2);
       outline: none;
-      box-shadow: 1px 1px 1px $light;
+      box-shadow: inset 0px 0px 3px 1px $light;
     }
   }
 }
